@@ -1,0 +1,5 @@
+<h1>Project</h1>
+<p>{{object.title}}</p>
+{% for e in object.elements.all %}
+<p style="margin-left:50px"> {{ e.title }}</p>
+{% endfor %}
