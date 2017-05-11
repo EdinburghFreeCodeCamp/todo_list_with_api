@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_EXEMPT_URLS = [r'^$']
+LOGIN_EXEMPT_URLS = [r'^$', r'^api']
 LOGIN_URL = "login"
 # Application definition
 
