@@ -1,3 +1,11 @@
+# The database
 db.sqlite3
+
+# Any compiled python files. 
 *.pyc
+
+# My virtual environment
+ENV
+
+# Editor auto created files.
 .ropeproject
