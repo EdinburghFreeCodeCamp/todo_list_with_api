@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{user.username}}</h1>
+
+<a href="{% url 'password_change' %}">Change Password</a>
+<p>email {{user.email}}</p>
+<p>first name {{user.first_name}}</p>
+<p>last name {{user.last_name}}</p>
+<p>last login {{user.last_login}}</p>
+<p>date joined {{user.date_joined}}</p>
+<p>api key {{ apikey }} </p>
+
+
+<button onclick="$('#edit_user_form').css('display', 'block')">Edit</button>
+<div id="edit_user_form" style="display:none">
+  <form action="" method="POST">
+{% csrf_token %}
+    {{ edit_form.as_p }}
+    <input type="submit" value="submit">
+  </form
+
+</div>
+{% endblock %}

@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.contrib.auth import urls as auth_urls
 from todo_website.views import homepage
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^todo', include('todo.urls')),
+    url(r'^todo/', include('todo.urls')),
+    url(r'^accounts/', include('accounts.urls')),
     url(r'^$', homepage.as_view()),
     url('', include(auth_urls)),
 ]
