@@ -9,6 +9,7 @@
 <p>last name {{user.last_name}}</p>
 <p>last login {{user.last_login}}</p>
 <p>date joined {{user.date_joined}}</p>
+<a href="{% url 'generate_api_key' %}">Generate API key</a>
 <p>api key {{ apikey }} </p>
 
 
